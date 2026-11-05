@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "qr-generator",
+    "title": "QR Generator",
+    "description": {
+      "es": "Crear códigos QR fácilmente.",
+      "en": "Create QR codes easily."
+    },
+    "image": null,
+    "github": null,
+    "page": "https://elpelucabeheran.online/qrgenerator/",
+    "pageInternal": false,
+    "date": null
+  },
+  {
+    "slug": "spyfall-online",
+    "title": "Spy Fall Online",
+    "description": {
+      "es": "Spy Fall Online: el juego para jugar en línea.",
+      "en": "Spy Fall Online: the game, playable online."
+    },
+    "image": null,
+    "github": null,
+    "page": "https://elpelucabeheran.online/spyfallen",
+    "pageInternal": false,
+    "date": null
+  }
+]

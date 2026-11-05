@@ -1,0 +1,46 @@
+:root{--bg:#1c1c1c;--edge:#3a3a3a;--orange:#D95700;--orange-hi:#F26A0A;--dark:#1c1c1c;--ink:#EDEDED;--mute:#A9A9A9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.5 'Chakra Petch',system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:68rem;margin:0 auto;padding:clamp(1.25rem,4vw,3rem) 1.25rem 4rem}
+h1,h2,h3{margin:0;line-height:1.05;font-weight:700}
+h1{font-size:clamp(2.25rem,7vw,4.5rem)}
+h2{font-size:clamp(1.5rem,4vw,2.25rem);margin:0 0 1.25rem}
+section{margin-top:3.5rem}
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.brand{display:flex;align-items:center;gap:1rem;text-decoration:none}
+.word{font-size:1.5rem;font-weight:700}
+.nav{display:flex;gap:.75rem;flex-wrap:wrap}
+.desc{max-width:40rem;color:var(--mute);font-size:1.25rem;margin:1rem 0 0}
+/* hexágonos: el borde es el fondo del <a>, el relleno naranja es el <span> */
+.hex{--c:1.1rem;display:inline-flex;background:var(--edge);padding:3px;color:var(--dark);text-decoration:none;clip-path:polygon(var(--c) 0,calc(100% - var(--c)) 0,100% 50%,calc(100% - var(--c)) 100%,var(--c) 100%,0 50%)}
+.hex>span{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--orange);clip-path:inherit}
+.hex.btn>span{padding:.55rem calc(var(--c) + .6rem);font-size:1.25rem;font-weight:500;min-height:3.2rem}
+.hex.lg>span{align-items:flex-start;text-align:left;min-height:4.2rem}
+.hex b{font-size:1.5rem;font-weight:500;line-height:1.1}
+.hex small{font-size:.85rem}
+.hex.ic{width:4.8rem;height:4.2rem}
+.hex.ic svg{width:2rem;height:2rem;fill:none;stroke:var(--dark);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hex.logo{width:4.6rem;height:4rem}
+.hex.logo>span{font-size:1.9rem;font-weight:700}
+a.hex:hover{background:#5a5a5a}
+a.hex:hover>span{background:var(--orange-hi)}
+a.hex:focus-visible{background:#fff;outline:none}
+.hex[aria-disabled=true]{opacity:.35}
+.icons{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.icons .lg{margin-left:.5rem}
+/* esquinas cortadas (tarjeta e imagen) */
+.chamf{clip-path:polygon(var(--c) 0,calc(100% - var(--c)) 0,100% var(--c),100% calc(100% - var(--c)),calc(100% - var(--c)) 100%,var(--c) 100%,0 calc(100% - var(--c)),0 var(--c))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,34rem),1fr));gap:1.5rem;margin:0;padding:0;list-style:none}
+.card{--c:1.5rem;container-type:inline-size;background:var(--edge);padding:4px;height:100%}
+.cin{background:var(--bg);padding:1.25rem;height:100%;clip-path:inherit;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);grid-auto-rows:min-content;gap:1rem 1.25rem;align-content:start}
+.media{--c:.9rem;background:var(--edge);padding:3px}
+.media>*{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;clip-path:inherit}
+.media>div{display:grid;place-items:center;background:var(--orange);color:var(--dark);font-weight:700;font-size:1.5rem;text-align:center;padding:1rem}
+.acts{display:flex;flex-direction:column;gap:1rem;justify-content:center}
+.acts .hex{width:100%}
+.cin h3{grid-column:1/-1;font-size:1.9rem}
+.info{grid-column:1/-1;margin:0;color:var(--mute)}
+@container (max-width:30rem){.cin{grid-template-columns:1fr}.acts{flex-direction:row;flex-wrap:wrap}.acts .hex{flex:1 1 9rem;width:auto}}
+.more{margin:1.75rem 0 0}
+.empty{color:var(--mute);margin:0}
